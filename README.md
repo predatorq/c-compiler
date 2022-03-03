@@ -1,2 +1,2 @@
 # cplusplus-compiler
-Experiment for compiler class at SYSU
+Experiment of compiler class in SYSU
