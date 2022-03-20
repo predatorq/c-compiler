@@ -7,17 +7,22 @@ void lex_error(char* msg, int line);
 
 /* Definitions, note: \042 is '"' */
 INTEGER             ([0-9]+)
+SCIENCE             ({INTEGER}(\.[0-9]+)?([Ee][-+]?[0-9]+))
 UNTERM_STRING       (\042[^\042\n]*)
 STRING              (\042[^\042\n]*\042)
 IDENTIFIER          ([_a-zA-Z][_a-zA-Z0-9]*)
 OPERATOR            ([+*-/%=,;!<>(){}])
 SINGLE_COMMENT1     ("//"[^\n]*)
 SINGLE_COMMENT2     ("#"[^\n]*)
+BINARY              (0[bB][01]+)
+HEX                 (0[xX][a-fA-F0-9]+)
+OCTAL               (0[0-7]+)
+SPACE               ([ \t\r\a\n\f\v]+)
 
 %%
 
 [\n]                { cur_line_num++;                       }
-[ \t\r\a]+          { /* ignore all spaces */               }
+{SPACE}             { /* ignore all spaces */               }
 {SINGLE_COMMENT1}   { /* skip for single line comment */    }
 {SINGLE_COMMENT2}   { /* skip for single line commnet */    }
 
@@ -43,6 +48,10 @@ SINGLE_COMMENT2     ("#"[^\n]*)
 {INTEGER}           { return T_IntConstant;     }
 {STRING}            { return T_StringConstant;  }
 {IDENTIFIER}        { return T_Identifier;      }
+{SCIENCE}           { return T_Science;         }
+{BINARY}            { return T_Binary;          }
+{HEX}               { return T_Hex;             }
+{OCTAL}             { return T_Octal;           }
 
 <<EOF>>             { return 0; }
 
