@@ -3,9 +3,9 @@ typedef enum {
     T_Le = 256, T_Ge, T_Eq, T_Ne, T_And, T_Or, T_IntConstant,
     T_StringConstant, T_Identifier, T_Void, T_Int, T_While,
     T_If, T_Else, T_Return, T_Break, T_Continue, T_Print,
-    T_ReadInt, T_Science, T_Binary, T_Hex, T_Octal, T_Lshift,
-    T_Rshift, T_AddAssign, T_SubAssign, T_QuoAssign, T_MulAssign,
-    T_Sizeof
+    T_ReadInt, T_Science, T_Binary, T_Hex, T_Lshift, T_Sizeof,
+    T_Rshift, T_AddAssign, T_SubAssign, T_QuoAssign, T_MulAssign
+    
 
 } TokenType;
 
@@ -14,9 +14,9 @@ static void print_token(int token) {
         "T_Le", "T_Ge", "T_Eq", "T_Ne", "T_And", "T_Or", "T_IntConstant",
         "T_StringConstant", "T_Identifier", "T_Void", "T_Int", "T_While",
         "T_If", "T_Else", "T_Return", "T_Break", "T_Continue", "T_Print",
-        "T_ReadInt", "T_Science", "T_Binary", "T_Hex", "T_Octal", "T_Lshift",
+        "T_ReadInt", "T_Science", "T_Binary", "T_Hex", "T_Lshift", "T_Sizeof",
         "T_Rshift", "T_AddAssign", "T_SubAssign", "T_QuoAssign", "T_MulAssign",
-        "T_Sizeof"
+        
     };
 
     if (token < 256) {
@@ -42,7 +42,7 @@ SPACE               ([ \t\r\a\f\v]+)
 UNTERM_STRING       (\042[^\042\n]*)
 STRING              (\042[^\042\n]*\042)
 IDENTIFIER          ([_a-zA-Z][_a-zA-Z0-9]*)
-OPERATOR            ([+*-/%=,;!<>(){}])
+OPERATOR            ([+*-/%=,;!<>(){}&|])
 SINGLE_COMMENT     ("//"[^\n]*)
 
 %%
@@ -86,7 +86,6 @@ SINGLE_COMMENT     ("//"[^\n]*)
 {SCIENCE}           { return T_Science;         }
 {BINARY}            { return T_Binary;          }
 {HEX}               { return T_Hex;             }
-{OCTAL}             { return T_Octal;           }
 
 <<EOF>>             { return 0; }
 
