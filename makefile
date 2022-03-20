@@ -1,5 +1,5 @@
 VPATH = *.c samples
-VPATH = *l src
+VPATH = *.lex src
 out: tokens.txt
 
 tokens.txt: clang.out 
@@ -8,7 +8,7 @@ tokens.txt: clang.out
 clang.out: lex.yy.c
 	gcc -o $@ $<
 
-lex.yy.c: scanner.l
+lex.yy.c: clang.lex
 	flex $<
 
 clean: 

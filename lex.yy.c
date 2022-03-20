@@ -517,8 +517,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "src/scanner.l"
-#line 2 "src/scanner.l"
+#line 1 "src/clang.lex"
+#line 2 "src/clang.lex"
 typedef enum {
     T_Le = 256, T_Ge, T_Eq, T_Ne, T_And, T_Or, T_IntConstant,
     T_StringConstant, T_Identifier, T_Void, T_Int, T_While,
@@ -768,7 +768,7 @@ YY_DECL
 		}
 
 	{
-#line 48 "src/scanner.l"
+#line 48 "src/clang.lex"
 
 
 #line 774 "lex.yy.c"
@@ -831,186 +831,186 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 50 "src/scanner.l"
+#line 50 "src/clang.lex"
 { cur_line_num++;                       }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 52 "src/scanner.l"
+#line 52 "src/clang.lex"
 { /* ignore all spaces */               }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 54 "src/scanner.l"
+#line 54 "src/clang.lex"
 { /* skip for single line comment */    }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 56 "src/scanner.l"
+#line 56 "src/clang.lex"
 { return yytext[0];         }   
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 58 "src/scanner.l"
+#line 58 "src/clang.lex"
 { return T_Le;              }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 59 "src/scanner.l"
+#line 59 "src/clang.lex"
 { return T_Ge;              }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 60 "src/scanner.l"
+#line 60 "src/clang.lex"
 { return T_Eq;              }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 61 "src/scanner.l"
+#line 61 "src/clang.lex"
 { return T_Ne;              }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 62 "src/scanner.l"
+#line 62 "src/clang.lex"
 { return T_And;             }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 63 "src/scanner.l"
+#line 63 "src/clang.lex"
 { return T_Or;              }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 64 "src/scanner.l"
+#line 64 "src/clang.lex"
 { return T_Void;            }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 65 "src/scanner.l"
+#line 65 "src/clang.lex"
 { return T_Int;             }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 66 "src/scanner.l"
+#line 66 "src/clang.lex"
 { return T_Sizeof;          }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 67 "src/scanner.l"
+#line 67 "src/clang.lex"
 { return T_While;           }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 68 "src/scanner.l"
+#line 68 "src/clang.lex"
 { return T_If;              }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 69 "src/scanner.l"
+#line 69 "src/clang.lex"
 { return T_Else;            }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 70 "src/scanner.l"
+#line 70 "src/clang.lex"
 { return T_Return;          }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 71 "src/scanner.l"
+#line 71 "src/clang.lex"
 { return T_Break;           }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 72 "src/scanner.l"
+#line 72 "src/clang.lex"
 { return T_Continue;        }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 73 "src/scanner.l"
+#line 73 "src/clang.lex"
 { return T_Print;           }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 74 "src/scanner.l"
+#line 74 "src/clang.lex"
 { return T_ReadInt;         }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 75 "src/scanner.l"
+#line 75 "src/clang.lex"
 { return T_Lshift;          }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 76 "src/scanner.l"
+#line 76 "src/clang.lex"
 { return T_Rshift;          }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 77 "src/scanner.l"
+#line 77 "src/clang.lex"
 { return T_AddAssign;       }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 78 "src/scanner.l"
+#line 78 "src/clang.lex"
 { return T_SubAssign;       }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 79 "src/scanner.l"
+#line 79 "src/clang.lex"
 { return T_QuoAssign;       }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 80 "src/scanner.l"
+#line 80 "src/clang.lex"
 { return T_MulAssign;       }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 83 "src/scanner.l"
+#line 83 "src/clang.lex"
 { return T_IntConstant;     }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 84 "src/scanner.l"
+#line 84 "src/clang.lex"
 { return T_StringConstant;  }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 85 "src/scanner.l"
+#line 85 "src/clang.lex"
 { return T_Identifier;      }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 86 "src/scanner.l"
+#line 86 "src/clang.lex"
 { return T_Science;         }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 87 "src/scanner.l"
+#line 87 "src/clang.lex"
 { return T_Binary;          }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 88 "src/scanner.l"
+#line 88 "src/clang.lex"
 { return T_Hex;             }
 	YY_BREAK
 case YY_STATE_EOF(INITIAL):
-#line 90 "src/scanner.l"
+#line 90 "src/clang.lex"
 { return 0; }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 92 "src/scanner.l"
+#line 92 "src/clang.lex"
 { lex_error("Unterminated string constant", cur_line_num);  }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 93 "src/scanner.l"
+#line 93 "src/clang.lex"
 { lex_error("Unrecognized character", cur_line_num);        }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 95 "src/scanner.l"
+#line 95 "src/clang.lex"
 ECHO;
 	YY_BREAK
 #line 1016 "lex.yy.c"
@@ -2016,7 +2016,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 95 "src/scanner.l"
+#line 95 "src/clang.lex"
 
 
 int main(int argc, char* argv[]) {
