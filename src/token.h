@@ -6,7 +6,8 @@ typedef enum {
     T_StringConstant, T_Identifier, T_Void, T_Int, T_While,
     T_If, T_Else, T_Return, T_Break, T_Continue, T_Print,
     T_ReadInt, T_Science, T_Binary, T_Hex, T_Octal, T_Lshift,
-    T_Rshift, T_AddAssign, T_SubAssign, T_QuoAssign, T_MulAssign
+    T_Rshift, T_AddAssign, T_SubAssign, T_QuoAssign, T_MulAssign,
+    T_Sizeof
 
 } TokenType;
 
@@ -16,7 +17,8 @@ static void print_token(int token) {
         "T_StringConstant", "T_Identifier", "T_Void", "T_Int", "T_While",
         "T_If", "T_Else", "T_Return", "T_Break", "T_Continue", "T_Print",
         "T_ReadInt", "T_Science", "T_Binary", "T_Hex", "T_Octal", "T_Lshift",
-        "T_Rshift", "T_AddAssign", "T_SubAssign", "T_QuoAssign", "T_MulAssign"
+        "T_Rshift", "T_AddAssign", "T_SubAssign", "T_QuoAssign", "T_MulAssign",
+        "T_Sizeof"
     };
 
     if (token < 256) {
