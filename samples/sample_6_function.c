@@ -8,6 +8,8 @@ int main() {
 	while (n <= 10) {
 		print("fib(%d)=%d", n, fib(n));
 		n = n + 1;
+		n += 1;
+		n -= 1;
 	}
 
 	return 0;

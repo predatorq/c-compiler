@@ -42,6 +42,14 @@ T_Identifier        n
 +                   +
 T_IntConstant       1
 ;                   ;
+T_Identifier        n
+T_AddAssign         +=
+T_IntConstant       1
+;                   ;
+T_Identifier        n
+T_SubAssign         -=
+T_IntConstant       1
+;                   ;
 }                   }
 T_Return            return
 T_IntConstant       0
