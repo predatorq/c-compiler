@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Fri May  6 14:45:15 2022
+# Make data base, printed on Fri May  6 14:54:53 2022
  
 
 # Variables
@@ -78,7 +78,7 @@ VSCODE_CODE_CACHE_PATH = /Users/predator/Library/Application Support/Code/Cached
 # environment
 LOGNAME = predator
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 ZSH = /Users/predator/.oh-my-zsh
 # environment
@@ -150,6 +150,7 @@ LANG = C
 # environment
 VSCODE_PID = 66001
 # variable set hash-table stats:
+ 
 # Load=67/1024=7%, Rehash=0, Collisions=1/92=1%
 
 # Pattern-specific Variable Values
@@ -159,10 +160,10 @@ VSCODE_PID = 66001
 # Directories
 
 # . (device 16777223, inode 681431): 12 files, no impossibilities.
-# src (device 16777223, inode 681597): 3 files, no impossibilities.
+# src (device 16777223, inode 681597): 4 files, no impossibilities.
 # *.lex: could not be stat'd.
 
-# 15 files, no impossibilities in 3 directories.
+# 16 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -188,7 +189,7 @@ all:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-27 23:20:13
+#  Last modified 2022-05-06 14:54:25
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -221,7 +222,6 @@ lex.yy.c: clang.lex
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -241,7 +241,7 @@ tokens.txt: clang.out
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `makefile', line 6):
-	./$< < samples/demo.c > $@
+	./$< < samples/numbers.c > $@
 	
 
 # files hash-table stats:
@@ -258,6 +258,6 @@ tokens.txt: clang.out
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri May  6 14:45:15 2022
+# Finished Make data base on Fri May  6 14:54:53 2022
 
  

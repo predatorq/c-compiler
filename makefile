@@ -3,7 +3,7 @@ VPATH = *.lex src
 out: tokens.txt
 
 tokens.txt: clang.out 
-	./$< < samples/demo.c > $@
+	./$< < samples/numbers.c > $@
 
 clang.out: lex.yy.c
 	gcc -o $@ $<

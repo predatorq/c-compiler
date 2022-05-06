@@ -1,0 +1,19 @@
+GRAMMAR_FOR_EXPERIMENT2
+-------------------------------------------------
+E ( T A @
+E T_IntConstant T A @
+A + + T A @
+A - - T A @
+A ) e @
+A $ e @
+T ( F B @
+T T_IntConstant F B @
+B + e @
+B - e @
+B * * F B @
+B / / F B @
+B ) e @
+B $ e @
+F ( ( E ) @
+F T_IntConstant T_IntConstant @
+@

@@ -1,0 +1,11 @@
+TOKEN-TYPE          TOKEN-VALUE
+-------------------------------------------------
+(                   (
+T_IntConstant       1345
++                   +
+T_IntConstant       234
+)                   )
+/                   /
+T_IntConstant       30
+*                   *
+T_IntConstant       45
