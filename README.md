@@ -1,5 +1,5 @@
-# C compiler
-Experiment of compiler class in SYSU
+# C Compiler
+Assignments of Compiler Class in SYSU
 
 ## Assignments
 
