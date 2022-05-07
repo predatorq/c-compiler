@@ -1,5 +1,7 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/predator/Documents/GitHub/c-compiler'
-make: Nothing to be done for `out'.
+./clang.out < samples/numbers.c > tokens.txt
+./LR0.out tokens.txt goto.txt shift.txt reduce.txt >> action_chart.txt
+ 
 make: Leaving directory `/Users/predator/Documents/GitHub/c-compiler'
  

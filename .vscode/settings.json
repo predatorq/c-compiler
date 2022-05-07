@@ -6,6 +6,15 @@
         "vector": "cpp",
         "stack": "cpp",
         "map": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "__node_handle": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "filesystem": "cpp",
+        "iterator": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp"
     }
 }

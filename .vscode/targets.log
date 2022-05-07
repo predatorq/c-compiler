@@ -10,8 +10,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Fri May  6 20:42:45 2022
+# Make data base, printed on Sat May  7 21:21:21 2022
 
+ 
 # Variables
 
 # automatic
@@ -27,7 +28,6 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
- 
 CURDIR := /Users/predator/Documents/GitHub/c-compiler
 # makefile
 SHELL = /bin/sh
@@ -106,6 +106,7 @@ LESS = -R
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
+ 
 .VARIABLES := 
 # environment
 TMPDIR = /var/folders/l9/mvqfq_cd0dj8gn_9n4lvk_r80000gn/T/
@@ -158,17 +159,23 @@ VSCODE_PID = 66001
 
 # Directories
 
-# . (device 16777223, inode 681431): 16 files, no impossibilities.
-# src (device 16777223, inode 681597): 5 files, no impossibilities.
+# . (device 16777223, inode 681431): 19 files, no impossibilities.
+# src (device 16777223, inode 681597): 6 files, no impossibilities.
 # *.lex: could not be stat'd.
 
-# 21 files, no impossibilities in 3 directories.
+# 25 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+
+# Not a target:
+LR0.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 all:
@@ -183,12 +190,13 @@ all:
 .SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-06 20:42:07
+#  Last modified 2022-05-07 21:20:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -198,7 +206,7 @@ clang.out: lex.yy.c
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 15):
+#  commands to execute (from `makefile', line 21):
 	gcc -o $@ $<
 	
 
@@ -211,7 +219,7 @@ LL1.out: LL1.cpp
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 9):
+#  commands to execute (from `makefile', line 15):
 	g++ -o $@ $< -std=c++2a
 	
 
@@ -219,7 +227,7 @@ lex.yy.c: clang.lex
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 18):
+#  commands to execute (from `makefile', line 24):
 	flex $<
 	
 
@@ -233,7 +241,7 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 21):
+#  commands to execute (from `makefile', line 27):
 	rm clang.out lex.yy.c tokens.txt LL1.out action_chart.txt
 	
 
@@ -243,30 +251,38 @@ clang.lex:
 #  Modification time never checked.
 #  File has not been updated.
 
+LR0.out: LR0.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 12):
+	g++ -o $@ $< -std=c++2a
+	
+
 # Not a target:
 LL1.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-action_chart.txt: LL1.out tokens.txt
+action_chart.txt: LR0.out tokens.txt
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 6):
-	./$< $< grammar.txt >> $@
+#  commands to execute (from `makefile', line 9):
+	./$< tokens.txt goto.txt shift.txt reduce.txt >> $@
 	
 
 tokens.txt: clang.out
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 12):
+#  commands to execute (from `makefile', line 18):
 	./$< < samples/numbers.c > $@
 	
 
 # files hash-table stats:
-# Load=13/1024=1%, Rehash=0, Collisions=0/34=0%
+# Load=15/1024=1%, Rehash=0, Collisions=0/37=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -279,6 +295,6 @@ tokens.txt: clang.out
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri May  6 20:42:45 2022
+# Finished Make data base on Sat May  7 21:21:21 2022
 
  
