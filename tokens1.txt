@@ -1,0 +1,15 @@
+TOKEN-TYPE          TOKEN-VALUE
+-------------------------------------------------
+(                   (
+T_Identifier        a
++                   +
+T_Identifier        b
+)                   )
+*                   *
+(                   (
+T_Identifier        c
+-                   -
+T_IntConstant       4
+)                   )
+/                   /
+T_IntConstant       99
