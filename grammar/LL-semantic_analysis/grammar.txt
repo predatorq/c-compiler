@@ -1,0 +1,22 @@
+GRAMMAR_FOR_EXPERIMENT3
+-------------------------------------------------
+E T_IntConstant T Es @
+E T_Identifier T Es @
+E ( T Es @
+Es ) e @
+Es + + T GEQ:+ Es @
+Es - - T GEQ:- Es @
+Es # e @
+T T_IntConstant P Ts @
+T T_Identifier P Ts @
+T ( P Ts @
+Ts ) e @
+Ts + e @
+Ts - e @
+Ts * * P GEQ:* Ts @
+Ts / / P GEQ:/ Ts @
+Ts # e @
+P T_IntConstant T_IntConstant Push:T_IntConstant @
+P T_Identifier T_Identifier Push:T_Identifier @
+P ( ( E ) @
+@

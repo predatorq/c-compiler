@@ -1,7 +1,11 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/predator/Documents/GitHub/c-compiler'
+g++ -o LL1-semantic.out src/LL1-semantic.cpp -std=c++2a
+ 
+flex src/clang.lex
+gcc -o clang.out lex.yy.c
 ./clang.out < samples/numbers.c > tokens.txt
-./LR0.out tokens.txt goto.txt shift.txt reduce.txt >> action_chart.txt
+./LL1-semantic.out tokens.txt grammar/LL-semantic_analysis/grammar.txt >> RPN.txt
  
 make: Leaving directory `/Users/predator/Documents/GitHub/c-compiler'
  

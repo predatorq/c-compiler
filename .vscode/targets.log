@@ -10,9 +10,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sat May  7 21:21:21 2022
+# Make data base, printed on Thu May 26 18:46:06 2022
 
- 
 # Variables
 
 # automatic
@@ -32,7 +31,7 @@ CURDIR := /Users/predator/Documents/GitHub/c-compiler
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"1a7316c624e1dd66d26cf581ee0fb4ca.zh-cn","_translationsConfigFile":"/Users/predator/Library/Application Support/Code/clp/1a7316c624e1dd66d26cf581ee0fb4ca.zh-cn/tcf.json","_cacheRoot":"/Users/predator/Library/Application Support/Code/clp/1a7316c624e1dd66d26cf581ee0fb4ca.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/predator/Library/Application Support/Code/clp/1a7316c624e1dd66d26cf581ee0fb4ca.zh-cn/57fd6d0195bb9b9d1b49f6da5db789060795de47","_corruptedFile":"/Users/predator/Library/Application Support/Code/clp/1a7316c624e1dd66d26cf581ee0fb4ca.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"42e84e0914b17800d483f69e299e1b00.zh-cn","_translationsConfigFile":"/Users/predator/Library/Application Support/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/tcf.json","_cacheRoot":"/Users/predator/Library/Application Support/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/predator/Library/Application Support/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/Users/predator/Library/Application Support/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `makefile', line 1)
@@ -42,7 +41,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/l9/mvqfq_cd0dj8gn_9n4lvk_r80000gn/T/vscode-ipc-a9e019d6-0570-4489-81b1-13a1e9c4d737.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/l9/mvqfq_cd0dj8gn_9n4lvk_r80000gn/T/vscode-ipc-ba760e99-9280-40da-8d69-40dc964cc955.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -58,7 +57,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.VFC9BrOIDM/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.4G5iOP4AcI/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -74,7 +73,7 @@ HOME = /Users/predator
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/predator/Library/Application Support/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
+VSCODE_CODE_CACHE_PATH = /Users/predator/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LOGNAME = predator
 # environment
@@ -106,14 +105,13 @@ LESS = -R
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
- 
 .VARIABLES := 
 # environment
 TMPDIR = /var/folders/l9/mvqfq_cd0dj8gn_9n4lvk_r80000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/predator/Library/Application Support/Code/1.67.0-main.sock
+VSCODE_IPC_HOOK = /Users/predator/Library/Application Support/Code/1.67.2-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -149,7 +147,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 66001
+VSCODE_PID = 39067
 # variable set hash-table stats:
 # Load=67/1024=7%, Rehash=0, Collisions=1/92=1%
 
@@ -159,23 +157,17 @@ VSCODE_PID = 66001
 
 # Directories
 
-# . (device 16777223, inode 681431): 19 files, no impossibilities.
+# . (device 16777223, inode 681431): 13 files, no impossibilities.
 # src (device 16777223, inode 681597): 6 files, no impossibilities.
 # *.lex: could not be stat'd.
 
-# 25 files, no impossibilities in 3 directories.
+# 19 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
-
-# Not a target:
-LR0.cpp:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
 # Not a target:
 all:
@@ -186,17 +178,24 @@ all:
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
+LL1-semantic.out: LL1-semantic.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 9):
+	g++ -o $@ $< -std=c++2a
+	
+
 # Not a target:
 .SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-07 21:20:12
+#  Last modified 2022-05-26 18:46:03
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -206,28 +205,26 @@ clang.out: lex.yy.c
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 21):
+#  commands to execute (from `makefile', line 15):
 	gcc -o $@ $<
 	
 
-out: action_chart.txt
+out: RPN.txt
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-LL1.out: LL1.cpp
+# Not a target:
+LL1-semantic.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 15):
-	g++ -o $@ $< -std=c++2a
-	
 
 lex.yy.c: clang.lex
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 24):
+#  commands to execute (from `makefile', line 18):
 	flex $<
 	
 
@@ -241,8 +238,8 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 27):
-	rm clang.out lex.yy.c tokens.txt LL1.out action_chart.txt
+#  commands to execute (from `makefile', line 21):
+	rm clang.out lex.yy.c tokens.txt LL1-semantic.out RPN.txt
 	
 
 # Not a target:
@@ -251,38 +248,24 @@ clang.lex:
 #  Modification time never checked.
 #  File has not been updated.
 
-LR0.out: LR0.cpp
+RPN.txt: LL1-semantic.out tokens.txt
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 12):
-	g++ -o $@ $< -std=c++2a
-	
-
-# Not a target:
-LL1.cpp:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-action_chart.txt: LR0.out tokens.txt
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `makefile', line 9):
-	./$< tokens.txt goto.txt shift.txt reduce.txt >> $@
+#  commands to execute (from `makefile', line 6):
+	./$< tokens.txt grammar/LL-semantic_analysis/grammar.txt >> $@
 	
 
 tokens.txt: clang.out
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 18):
+#  commands to execute (from `makefile', line 12):
 	./$< < samples/numbers.c > $@
 	
 
 # files hash-table stats:
-# Load=15/1024=1%, Rehash=0, Collisions=0/37=0%
+# Load=13/1024=1%, Rehash=0, Collisions=0/34=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -295,6 +278,6 @@ tokens.txt: clang.out
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat May  7 21:21:21 2022
+# Finished Make data base on Thu May 26 18:46:06 2022
 
  
