@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Thu May 26 21:48:55 2022
+# Make data base, printed on Fri Jun 24 17:14:55 2022
 
 # Variables
 
@@ -31,7 +28,7 @@ CURDIR := /Users/predator/Documents/GitHub/c-compiler
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"42e84e0914b17800d483f69e299e1b00.zh-cn","_translationsConfigFile":"/Users/predator/Library/Application Support/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/tcf.json","_cacheRoot":"/Users/predator/Library/Application Support/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/predator/Library/Application Support/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/Users/predator/Library/Application Support/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `makefile', line 1)
@@ -41,7 +38,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/l9/mvqfq_cd0dj8gn_9n4lvk_r80000gn/T/vscode-ipc-ba760e99-9280-40da-8d69-40dc964cc955.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/l9/mvqfq_cd0dj8gn_9n4lvk_r80000gn/T/vscode-ipc-a84c8139-7459-4193-bd16-34388312aebd.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -51,13 +48,15 @@ LSCOLORS = Gxfxcxdxbxegedabagacad
 # makefile (from `makefile', line 2)
 VPATH = *.lex src
 # environment
+LaunchInstanceID = 67DE8532-97DB-4667-8C79-1577CB8AC626
+# environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.4G5iOP4AcI/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.wMPTv47RXw/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -73,7 +72,7 @@ HOME = /Users/predator
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/predator/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+VSCODE_CODE_CACHE_PATH = /Users/predator/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
 LOGNAME = predator
 # environment
@@ -111,7 +110,7 @@ TMPDIR = /var/folders/l9/mvqfq_cd0dj8gn_9n4lvk_r80000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/predator/Library/Application Support/Code/1.67.2-main.sock
+VSCODE_IPC_HOOK = /Users/predator/Library/Application Support/Code/1.68.1-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -119,13 +118,13 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.1761702.1761708
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.5895522.5895528
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
-__CF_USER_TEXT_ENCODING = 0x1F5:0x19:0x34
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
 # environment
 COMMAND_MODE = unix2003
 # default
@@ -136,6 +135,8 @@ MAKEFILES :=
 PAGER = less
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a6
 # automatic
 ^F = $(notdir $^)
 # default
@@ -147,9 +148,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 39067
+VSCODE_PID = 455
 # variable set hash-table stats:
-# Load=67/1024=7%, Rehash=0, Collisions=1/92=1%
+# Load=69/1024=7%, Rehash=0, Collisions=1/94=1%
 
 # Pattern-specific Variable Values
 
@@ -157,11 +158,11 @@ VSCODE_PID = 39067
 
 # Directories
 
-# . (device 16777223, inode 681431): 19 files, no impossibilities.
-# src (device 16777223, inode 681597): 6 files, no impossibilities.
+# . (device 16777221, inode 681431): 12 files, no impossibilities.
+# src (device 16777221, inode 681597): 6 files, no impossibilities.
 # *.lex: could not be stat'd.
 
-# 25 files, no impossibilities in 3 directories.
+# 18 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -211,7 +212,7 @@ RPN_correct.txt: LL1-semantic.out tokens1.txt
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-26 21:48:18
+#  Last modified 2022-05-26 21:49:02
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -277,7 +278,7 @@ RPN_wrong.txt: LL1-semantic.out tokens2.txt
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `makefile', line 9):
-	./$< tokens1.txt grammar/LL-semantic_analysis/grammar.txt >> $@
+	./$< tokens2.txt grammar/LL-semantic_analysis/grammar.txt >> $@
 	
 
 # files hash-table stats:
@@ -294,6 +295,8 @@ RPN_wrong.txt: LL1-semantic.out tokens2.txt
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu May 26 21:48:55 2022
+# Finished Make data base on Fri Jun 24 17:14:55 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
