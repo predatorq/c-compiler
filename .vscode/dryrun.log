@@ -1,11 +1,5 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/predator/Documents/GitHub/c-compiler'
-g++ -o LL1-semantic.out src/LL1-semantic.cpp -std=c++2a
-flex src/clang.lex
-gcc -o clang.out lex.yy.c
-./clang.out < samples/numbers_correct.c > tokens1.txt
-./LL1-semantic.out tokens1.txt grammar/LL-semantic_analysis/grammar.txt >> RPN_correct.txt
-./clang.out < samples/numbers_wrong.c > tokens2.txt
-./LL1-semantic.out tokens2.txt grammar/LL-semantic_analysis/grammar.txt >> RPN_wrong.txt
+make: Nothing to be done for `build'.
 make: Leaving directory `/Users/predator/Documents/GitHub/c-compiler'
  

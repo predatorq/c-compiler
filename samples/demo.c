@@ -1,27 +1,20 @@
 int main() {
-	int n;
-	n = 10;
-    int _m7n3;
-    _m7n3 = 1e10;
-    _m7n3 = 0b10;
-    _m7n3 = 0xFA;
-    _m7n3 = 0777; // just a comment
+    int a, b;
+    a = 1 + 1;
+    a = 3 * 3;
+    b = 2 + 2;
+    b = 4 + 4;
 
-    int a;
-    int b;
-    a = 1;
-    b = 0;
-    a = a & b;
-
-    n = readint("Please input an integer: ");
-	print("Your input number is: %d", n);
-
-    while (n >= 0) {
-		if (n == 5) {
-			break;
-		}
-		n -= 1;
-        n << 1;
+    while( a < 80 ){
+        a = a + b;
+        print("INWHILE");
+        if(a > 60){
+            print("BREAK");
+            break;
+        }
     }
+    // comment
+    print("EXIT");
     return 0;
+    
 }

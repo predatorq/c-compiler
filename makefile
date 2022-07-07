@@ -1,27 +1,35 @@
-VPATH = *.c samples
-VPATH = *.lex src
-out: RPN_correct.txt RPN_wrong.txt
+TESTFILE = samples/demo.c
+SCANNER  = src/scanner.l
+PARSER   = src/parser.y
+INC1      = src/macro.inc
+INC2      = samples/demo.inc
 
-RPN_correct.txt: LL1-semantic.out tokens1.txt
-	./$< tokens1.txt grammar/LL-semantic_analysis/grammar.txt >> $@
+CC       = gcc
+FRONTOBJ = lex.yy.o y.tab.o
+TESTOUT  = samples/demo.asm
+FRONTEXE = tcc-front
+OUTFILES = lex.yy.c y.tab.c y.tab.h y.output $(FRONTOBJ) $(TESTOUT) $(FRONTEXE) $(INC2) check.asm demo
 
-RPN_wrong.txt: LL1-semantic.out tokens2.txt
-	./$< tokens2.txt grammar/LL-semantic_analysis/grammar.txt >> $@
+demo: $(TESTOUT)
+	nasm -f elf32 -P"$(INC1)" -P"$(INC2)" -o demo.o $(TESTOUT)
+	ld -m elf_i386 -o $@ demo.o
+	./demo
 
-LL1-semantic.out: LL1-semantic.cpp
-	g++ -o $@ $< -std=c++2a
+check: $(TESTOUT)
+	nasm -P"$(INC1)" -P"$(INC2)" -e $(TESTOUT) -o check.asm 
 
-tokens1.txt: clang.out
-	./$< < samples/numbers_correct.c > $@
+$(TESTOUT): $(TESTFILE) $(FRONTEXE)
+	./$(FRONTEXE) $< > $@
 
-tokens2.txt: clang.out
-	./$< < samples/numbers_wrong.c > $@
+clean:
+	rm -f *.o $(OUTFILES)
 
-clang.out: lex.yy.c
-	gcc -o $@ $<
+$(FRONTEXE): $(FRONTOBJ)
+	$(CC) -w -o $(FRONTEXE) $(FRONTOBJ) 
+	chmod u+x $(FRONTEXE) 
 
-lex.yy.c: clang.lex
+lex.yy.c: $(SCANNER) y.tab.c
 	flex $<
 
-clean: 
-	rm clang.out lex.yy.c tokens1.txt tokens1.txt LL1-semantic.out RPN_correct.txt RPN_wrong.txt
+y.tab.c: $(PARSER)
+	bison -vdty $<

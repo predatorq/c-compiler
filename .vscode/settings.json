@@ -17,6 +17,8 @@
         "string_view": "cpp",
         "unordered_map": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "y.tab.h": "c",
+        "algorithm": "c"
     }
 }
